@@ -1,6 +1,6 @@
 # manages content for discord json
 
-from webhookembed import EmbedData
+from modules.webhookembed import EmbedData
 
 from typing import Optional, List
 

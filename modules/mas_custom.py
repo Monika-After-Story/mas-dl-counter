@@ -1,5 +1,5 @@
 import config
-import contentman
+import modules.contentman as contentman
 import requests
 import re
 
