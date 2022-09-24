@@ -1,6 +1,7 @@
 
 import config
 import json
+import os
 import os.path
 
 from modules.mas_custom import PackageCounter
@@ -23,5 +24,5 @@ def update_endpoint(counter: PackageCounter):
     data["Spritepacks (Total)"] = counter.total_spritepacks()
     data["Installer (Total)"] = counter.total_installer()
 
-    with open(path, "w") as file:
+    with os.open(path, os.O_CREAT | os.O_WRONLY | os.O_TRUNC) as file:
         json.dump(data, file)
