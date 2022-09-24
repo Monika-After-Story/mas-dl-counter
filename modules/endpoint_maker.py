@@ -24,6 +24,7 @@ def update_endpoint(counter: PackageCounter):
     data["Spritepacks (Total)"] = counter.total_spritepacks()
     data["Installer (Total)"] = counter.total_installer()
 
+    os.umask(0)
     fd = os.open(path, os.O_CREAT | os.O_WRONLY | os.O_TRUNC)
     with open(fd, "w") as file:
         json.dump(data, file)
