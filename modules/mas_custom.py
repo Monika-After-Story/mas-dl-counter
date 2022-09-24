@@ -291,11 +291,11 @@ class MASCustom():
         self.gh_token = config.GH_TOKEN
         self.webhook_url = config.WEBHOOK_URL
 
-    def run_mas_download_counter(self):
+    def run_mas_download_counter(self) -> PackageCounter:
         """
         counts downloads accordingly.
         :param log:
-        :return:
+        :return: package counter
         """
 
         # download the stats
@@ -345,3 +345,5 @@ class MASCustom():
             ]
         )
         requests.post(config.WEBHOOK_URL, json=content)
+
+        return counter

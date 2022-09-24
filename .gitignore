@@ -131,3 +131,4 @@ dmypy.json
 *.swp
 config.py
 .idea/
+dl.json
