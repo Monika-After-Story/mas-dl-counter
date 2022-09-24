@@ -88,9 +88,6 @@ def ver_str(value: int) -> str:
 
 class PackageCounter():
 
-    counts: dict
-    ver_counts: dict
-
     def __init__(self):
         self.counts = {
             _MOD_REG: 0,
@@ -289,9 +286,6 @@ class PackageCounter():
 
 
 class MASCustom():
-
-    gh_token: str
-    webhook_url: str
 
     def __init__(self):
         self.gh_token = config.GH_TOKEN

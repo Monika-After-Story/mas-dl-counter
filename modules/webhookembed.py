@@ -4,10 +4,6 @@ from typing import List, Any
 
 class FieldData():
 
-    name: str
-    value: Any
-    inline: bool = True
-
     def __init__(self, name: str, value: Any, inline: bool=True):
         self.name = name
         self.value = value
@@ -29,10 +25,6 @@ class FieldData():
 
 
 class EmbedData():
-
-    color: int = 0xDEADBF
-    title: str = ""
-    fields: List[FieldData] = []
 
     def __init__(self, color: int = 0xDEADBF, title: str = "", fields: List[FieldData] = None):
         if fields is None:
